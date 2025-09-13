@@ -1,0 +1,119 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><title>Ejemplo Completo HTML5</title>
+<base href="https://midominio.com/" target="_blank">
+<meta name="description" content="Demostración de todas las etiquetas HTML5">
+<meta name="author" content="Juan Coronel">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" href="j.png"></head><body>
+
+<header>
+<hgroup><h1>Demostración HTML5</h1><h2>Ejemplo práctico</h2></hgroup>
+<nav><a href="home.html">Inicio</a> | <a href="articulos.html">Artículos</a> | <a href="contacto.html">Contacto</a></nav>
+</header>
+
+<main>
+<article>
+<header><h2>Texto y Semántica</h2></header>
+<section>
+<p><strong>Importante</strong>, <em>énfasis</em>, <abbr title="Lenguaje de Marcado de Hipertexto">HTML</abbr>, <q cite="https://midominio.com/cita">cita</q>, <mark>resaltado</mark>, <b>atención</b>, <i>tecnicismo</i>, <s>incorrecto</s>, <u>sonido</u>, <small>nota</small>, <sub>sub</sub>, <sup>sup</sup>.</p>
+<p><del cite="https://midominio.com/old" datetime="2025-09-10">texto borrado</del> y <ins cite="https://midominio.com/new" datetime="2025-09-12">texto insertado</ins>.</p>
+<hr>
+</section>
+
+<section>
+<h3>Bloques</h3>
+<div><p>Un div con <a href="https://midominio.com/link" target="_blank" rel="noopener">enlace</a>.<br>Salto con br<wbr>aquí.</p></div>
+<blockquote cite="https://midominio.com/libro"><p>Cita larga con varios párrafos.</p><p>Segundo párrafo.</p></blockquote>
+<pre>Texto pre
+  formateado
+    aquí</pre>
+<p>Código: <code>console.log("Hola");</code> Salida: <samp>Hola</samp> Variable: <var>x</var> Entrada: <kbd>Ctrl+C</kbd>.</p>
+<p><dfn title="Definición">HTML</dfn> es un lenguaje de marcado. <data value="123">ID 123</data>.</p>
+<p><time datetime="2025-09-13">13/09/2025</time></p>
+<p><bdo dir="rtl">Texto invertido</bdo> <bdi dir="ltr">Texto aislado</bdi>.</p>
+<figure><img src="j.png" alt="Ejemplo" width="150"><figcaption>Figura 1. Ejemplo</figcaption></figure>
+</section>
+<footer><p>Publicado en 2025</p></footer>
+</article>
+
+<aside><h4>Nota lateral</h4><p>Contenido complementario</p></aside>
+
+<section>
+<h2>Multimedia</h2>
+<picture><source srcset="j.png" media="(min-width:800px)" type="image/png"><img src="j.png" alt="Imagen j" width="150" height="100" usemap="#mapa"></picture>
+<map name="mapa"><area shape="rect" coords="0,0,75,50" href="https://midominio.com/zona1" alt="Zona 1"></map>
+<iframe src="https://midominio.com/frame" width="150" height="100" name="marco"></iframe>
+<embed src="j.png" type="image/png" width="150" height="100">
+<object data="j.png" type="image/png" width="150" height="100"><param name="autoplay" value="true"></object>
+<video width="150" height="100" controls poster="j.png"><source src="video.mp4" type="video/mp4"><track kind="subtitles" src="sub.vtt" srclang="es" label="Español" default></video>
+<audio controls style="width:150px;"><source src="audio.mp3" type="audio/mpeg"></audio>
+</section>
+
+<section>
+<h2>Listas</h2>
+<ol start="3" type="A" reversed><li value="3">Elemento 3</li><li value="2">Elemento 2</li><li value="1">Elemento 1</li></ol>
+<ul><li>Manzana</li><li>Banana</li><li>Cereza</li></ul>
+<menu><li>Inicio</li><li>Servicios</li><li>Contacto</li></menu>
+<dl><dt>HTML</dt><dd>Lenguaje de marcado</dd><dt>CSS</dt><dd>Lenguaje de estilos</dd><dt>JS</dt><dd>Lenguaje de programación</dd></dl>
+</section>
+
+<section>
+<h2>Tablas</h2>
+<table border="1">
+<caption>Ejemplo de tabla</caption>
+<colgroup><col span="2"><col></colgroup>
+<thead><tr><th scope="col">Nombre</th><th scope="col">Edad</th><th scope="col">Ciudad</th></tr></thead>
+<tbody><tr><td headers="n1">Ana</td><td>25</td><td rowspan="2">Madrid</td></tr>
+<tr><td headers="n2">Luis</td><td>30</td></tr>
+<tr><td colspan="2">Total</td><td>2 personas</td></tr></tbody>
+<tfoot><tr><td colspan="3">Fin</td></tr></tfoot>
+</table>
+</section>
+
+<section>
+<h2>Formularios</h2>
+<form action="procesar.php" method="post" autocomplete="on" target="_self">
+<fieldset><legend>Registro</legend>
+<label for="nombre">Nombre:</label><input type="text" id="nombre" name="nombre" maxlength="30"><br>
+<label for="email">Correo:</label><input type="email" id="email" name="email"><br>
+<label for="pass">Contraseña:</label><input type="password" id="pass" name="pass"><br>
+<label for="color">Color:</label><input type="color" id="color" name="color"><br>
+<label for="archivo">Archivo:</label><input type="file" id="archivo" name="archivo"><br>
+<label for="navegador">Navegador:</label><input list="navegadores" name="navegador"><datalist id="navegadores"><option value="Chrome"><option value="Firefox"><option value="Edge"><option value="Safari"></datalist><br>
+<label for="pais">País:</label><select id="pais" name="pais"><optgroup label="América"><option value="co">Colombia</option><option value="mx">México</option></optgroup><optgroup label="Europa"><option value="es" selected>España</option><option value="fr">Francia</option></optgroup></select><br>
+<label for="comentario">Comentario:</label><textarea id="comentario" name="comentario" rows="3" cols="30"></textarea><br>
+<button type="submit" name="enviar">Enviar</button><button type="reset">Resetear</button>
+</fieldset>
+</form>
+<output name="resultado" for="nombre email">Resultado aquí</output><br>
+<progress value="50" max="100"></progress><br>
+<meter value="0.6" min="0" max="1" low="0.3" high="0.8" optimum="0.7"></meter>
+</section>
+
+<section>
+<h2>Detalles y diálogo</h2>
+<details open name="info"><summary>Más información</summary><p>Texto dentro del detalle</p></details>
+<dialog open><p>Cuadro de diálogo activo</p><button>OK</button></dialog>
+</section>
+
+<section>
+<h2>Scripts y Canvas</h2>
+<canvas id="lienzo" width="150" height="100"></canvas>
+<script>let c=document.getElementById("lienzo").getContext("2d");c.fillStyle="blue";c.fillRect(20,20,100,50);</script>
+<noscript><p>Tu navegador no soporta JavaScript.</p></noscript>
+<template id="tpl"><p>Contenido de plantilla</p></template>
+<slot>Contenido por defecto</slot>
+</section>
+
+<section>
+<h2>Ruby</h2>
+<p><ruby>漢字<rp>(</rp><rt>kanji</rt><rp>)</rp></ruby></p>
+</section>
+
+</main>
+
+<footer>
+<address>Autor: <a href="mailto:juan@midominio.com">juan@midominio.com</a></address>
+<p>&copy; 2025 Proyecto HTML5</p>
+</footer>
+
+</body></html>
